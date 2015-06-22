@@ -1,7 +1,7 @@
 {
-  "name": "regexp",
+  "name": "Safari-validate",
   "version": "0.0.0",
-  "description": "regexp script",
+  "description": "Simple Safari validate plugin",
   "main": "index.js",
   "scripts": {
     "test": "test"
