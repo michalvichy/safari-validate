@@ -11,10 +11,18 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
+// Build scripts
+gulp.task('build', function() {
+    return gulp.src('js/*.js')
+        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist'));
+});
+
 // Watch files for changes
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['lint']);
 });
 
 // Default task
-gulp.task('default', ['lint', 'watch']);
+gulp.task('default', ['lint', 'build', 'watch']);
