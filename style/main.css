@@ -1,0 +1,13 @@
+input[type="text"] {
+    color: black;
+    display: block;
+    margin: 5px 0;
+}
+
+.valid {
+    background-color: green;
+}
+
+.invalid {
+    background-color: red;
+}
