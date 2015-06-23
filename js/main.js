@@ -53,8 +53,10 @@ String.prototype.contain = function(string) {
 
 (function(){
     "use strict";
-
-    if(navigator.appName.contain('Safari')) {
+    
+    var userAgent = navigator.userAgent;
+    
+    if(userAgent.contain('Safari') && !userAgent.contain('Chrome')) {
         $('.validate-form').validateForm();
     }
 })();
